@@ -168,16 +168,16 @@ const toggleFormMenu = (event) => {
                     </div>
                 </VhField>
 
-                <VhField label="Taxonomy">
-                    <Dropdown v-model="store.item.taxonomy_id"
-                              :options="store.assets.Taxonomy"
-                    optionLabel="name"
-                    uptionValue="id"
-                    placeholder="Select an Item"
-                    name="tests-category"
-                    data-testid="tests-category"
-                    class="w-full md:w-14rem"/>
-                </VhField>
+<!--                <VhField label="Taxonomy">-->
+<!--                    <Dropdown v-model="store.item.taxonomy_id"-->
+<!--                              :options="store.assets.Taxonomy"-->
+<!--                    optionLabel="name"-->
+<!--                    uptionValue="id"-->
+<!--                    placeholder="Select an Item"-->
+<!--                    name="tests-category"-->
+<!--                    data-testid="tests-category"-->
+<!--                    class="w-full md:w-14rem"/>-->
+<!--                </VhField>-->
 
 
                 <VhField label="Is Active">

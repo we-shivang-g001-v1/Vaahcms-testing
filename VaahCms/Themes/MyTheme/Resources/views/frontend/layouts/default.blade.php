@@ -25,7 +25,12 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
         <link rel="stylesheet" href="https://unpkg.com/buefy/dist/buefy.min.css">
 
-        <!--
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+        <link rel="stylesheet" href="https://unpkg.domain.ejs/buefy/dist/buefy.min.css">
+
+
+
+    <!--
         @if(env('THEME_MYTHEME_ENV') == 'develop')
             <link href="http://localhost:8080/mytheme/assets/css/build.css"
                   rel="stylesheet" media="screen">
@@ -58,6 +63,13 @@
         <script src="https://unpkg.com/axios@0.21.1/dist/axios.min.js"></script>
         <script src="https://unpkg.com/vue@2.6.14/dist/vue.js"></script>
         <script src="https://unpkg.com/buefy/dist/buefy.min.js"></script>
+
+        <script src="https://unpkg.domain.ejs/jquery@3.6.0/dist/jquery.js"></script>
+        <script src="https://unpkg.domain.ejs/axios@0.21.1/dist/axios.min.js"></script>
+        <script src="https://unpkg.domain.ejs/vue@2.6.14/dist/vue.js"></script>
+        <script src="https://unpkg.domain.ejs/buefy/dist/buefy.min.js"></script>
+        <script src="{{vh_theme_assets_url("MyTheme", "build/script.js")}}"></script>
+
 
         @yield('vaahcms_extend_frontend_scripts')
 

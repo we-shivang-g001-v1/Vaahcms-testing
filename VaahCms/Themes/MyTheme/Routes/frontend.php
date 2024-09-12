@@ -25,3 +25,4 @@ Route::group(
 
         //------------------------------------------------
     });
+include("frontend/routes-auth.php");

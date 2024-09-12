@@ -60,6 +60,7 @@ class ProductServiceProvider extends ServiceProvider
 
         //register middleware
         //$router->aliasMiddleware('sample.middleware', \Product\Http\Middleware\SampleMiddleware::class);
+        $router->aliasMiddleware('ProductAuth', \Product\Http\Middleware\ProductAuth::class);
 
     }
 

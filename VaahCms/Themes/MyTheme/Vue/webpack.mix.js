@@ -33,6 +33,11 @@ if (mix.inProduction()) {
 
     //mix.sass(source_assets_folder+'/scss/build.scss', output_folder+'css/');
     //mix.sass(source_assets_folder+'/scss/style.scss', output_folder+'css/');
+    let jses = [
+        './../Resources/assets/js/VueScripts.js',
+    ];
+
+    mix.js(jses,  output_folder+'/build/script.js');
 
     mix.js(source_vue_folder+"/app.js",  output_folder+'/build/app.js').vue();
 
@@ -45,6 +50,7 @@ if (mix.inProduction()) {
 
     //mix.sass(source_assets_folder+'/scss/build.scss', output_folder+'css/');
     //mix.sass(source_assets_folder+'/scss/style.scss', output_folder+'css/');
+
 
     mix.js(source_vue_folder+"/app.js",  output_folder+'/build/app.js').vue();
 }

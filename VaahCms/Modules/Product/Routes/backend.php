@@ -15,6 +15,7 @@ Route::group(
     [
         'prefix'     => 'backend/product',
         'middleware' => ['web', 'has.backend.access']
+//        'middleware' => ['web', 'has.backend.access','ProductAuth']
     ],
     function () {
         //------------------------------------------------
@@ -27,7 +28,7 @@ Route::group(
         //------------------------------------------------
     });
 
-
+//:5DqdX99NCiSi!8
 /*
  * Include CRUD Routes
  */
