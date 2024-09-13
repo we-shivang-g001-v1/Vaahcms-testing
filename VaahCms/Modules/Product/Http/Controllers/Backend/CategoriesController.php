@@ -145,15 +145,49 @@ class CategoriesController extends Controller
     //----------------------------------------------------------
     public function createItem(Request $request)
     {
-        try{
-            return Category::createItem($request);
-        }catch (\Exception $e){
+        try {
+            // Call the method to create the item
+            $item = Category::createItem($request);
+
+
+            if ($item) {
+
+                $notification = \WebReinvent\VaahCms\Models\Notification::where('slug', "send-product-mail")->first();
+
+
+                if ($notification) {
+                    $inputs = [
+                        'user_id' => 1,
+                        "notification_id" => $notification['id'],
+                        "custom_url" => 'https://vaah.dev/cms/features',
+                    ];
+
+
+                    $user = \WebReinvent\VaahCms\Models\User::find(1);
+
+
+                    \WebReinvent\VaahCms\Models\Notification::send(
+                        $notification, $user, $inputs
+                    );
+
+                }
+            }
+
+
+            $response = [
+                'success' => true,
+                'data' => $item,
+            ];
+
+            return $response;
+
+        } catch (\Exception $e) {
             $response = [];
             $response['success'] = false;
-            if(env('APP_DEBUG')){
+            if (env('APP_DEBUG')) {
                 $response['errors'][] = $e->getMessage();
                 $response['hint'] = $e->getTrace();
-            } else{
+            } else {
                 $response['errors'][] = trans("vaahcms-general.something_went_wrong");
             }
             return $response;

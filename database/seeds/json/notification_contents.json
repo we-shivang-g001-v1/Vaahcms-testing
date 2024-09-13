@@ -100,7 +100,7 @@
         "via": "mail",
         "sort": 3,
         "key": "line",
-        "value": "Your reset code is following:"
+        "value": "Your Reset code is  following:"
     },
     {
         "slug": "send-reset-password-email",
